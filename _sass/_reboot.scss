@@ -244,10 +244,20 @@ sup { top: -.5em; }
 a {
   color: rgba(var(--#{$prefix}link-color-rgb), var(--#{$prefix}link-opacity, 1));
   text-decoration: $link-decoration;
+  // uidaho custom 
+  text-decoration-color: #008080;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .15s;
+  transition-duration: .2s;
 
   &:hover {
-    --#{$prefix}link-color-rgb: var(--#{$prefix}link-hover-color-rgb);
-    text-decoration: $link-hover-decoration;
+    // uidaho custom
+    //--#{$prefix}link-color-rgb: var(--#{$prefix}link-hover-color-rgb);
+    //text-decoration: $link-hover-decoration;
+    box-shadow: 0 3px 0 0 #008080;
   }
 }
 
