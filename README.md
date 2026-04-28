@@ -1,6 +1,10 @@
 # bootstrap-sass-template
 
-customized bootstrap parts are marked with comment `uidaho custom`
+Customized version for U of I color theme.
+Customized bootstrap parts are marked with comment `uidaho custom`.
+
+- `bundle exec jekyll build`
+- get the file "assets/css/bootstrap-uidaho.scss"
 
 ## uidaho customizations
 
@@ -9,6 +13,7 @@ customized bootstrap parts are marked with comment `uidaho custom`
 - theme colors - $theme-colors
 - fonts - https://www.uidaho.edu/_next/static/css/a925ed7e05366a8f.css
 - headings font weight 900 - $headings-font-weight
+- links - colors, underline color, hover
 
 --------
 
