@@ -1,5 +1,7 @@
 # bootstrap-sass-template
 
+customized bootstrap parts are marked with comment `uidaho custom`
+
 ## uidaho customizations
 
 - wider containers - $container-max-widths
