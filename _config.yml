@@ -62,3 +62,5 @@ exclude: [docs/, Rakefile, README.md, LICENSE]
 sass:
   sass_dir: _sass
   style: compressed
+  # silence Dart Sass deprecation warnings coming from the Bootstrap source
+  quiet_deps: true
