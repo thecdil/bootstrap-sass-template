@@ -297,15 +297,6 @@ $cyans: (
 ) !default;
 // fusv-enable
 
-// scss-docs-start theme-color-variables
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-900 !default;
 // uidaho colors uidaho custom
 $pride-gold:  #F1B300 !default;
 $raspberry: #D7003F !default;
@@ -317,7 +308,19 @@ $palouse: #034441 !default;
 $leather: #AB4700 !default;
 $bark:  #552301 !default;
 $brand-black: #191919 !default;
+$brand-grey: #F2F2F2 !default;
 $brand-white: #ffffff !default;
+
+// uidaho primary = clearwater to handle focus states etc
+// scss-docs-start theme-color-variables
+$primary:       $clearwater !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-900 !default;
 
 // scss-docs-end theme-color-variables
 
@@ -392,7 +395,8 @@ $escaped-characters: (
 // Quickly modify global styling by enabling or disabling optional features.
 
 $enable-caret:                true !default;
-$enable-rounded:              true !default;
+// uidaho remove border radius
+$enable-rounded:              false !default;
 $enable-shadows:              false !default;
 $enable-gradients:            false !default;
 $enable-transitions:          true !default;
@@ -459,7 +463,7 @@ $position-values: (
 // Settings for the `<body>` element.
 
 $body-text-align:           null !default;
-$body-color:                #111; // uidaho custom $gray-900 !default;
+$body-color:                #191919; // uidaho custom $gray-900 !default;
 $body-bg:                   $white !default;
 
 $body-secondary-color:      rgba($body-color, .75) !default;
@@ -496,7 +500,8 @@ $icon-link-icon-transform:    translate3d(.25em, 0, 0) !default;
 //
 // Style p element.
 
-$paragraph-margin-bottom:   1rem !default;
+// uidaho custom wider margin
+$paragraph-margin-bottom:   1.6rem !default;
 
 
 // Grid breakpoints
@@ -625,9 +630,10 @@ $aspect-ratios: (
 //
 // Font, line-height, and color for body text, headings, and more.
 
+// uidaho public sans font
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Liberation Sans", Arial, sans-serif !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
@@ -635,8 +641,9 @@ $font-family-code:            var(--#{$prefix}font-monospace) !default;
 
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 // $font-size-base affects the font size of the body text
-$font-size-root:              null !default; // uidaho custom 1.125rem??
-$font-size-base:              1.2rem !default; // 1rem !default; Assumes the browser default, typically `16px`
+// uidaho custom 1.125rem
+$font-size-root:              null !default; 
+$font-size-base:              1.125rem !default; // 1rem !default; Assumes the browser default, typically `16px`
 $font-size-sm:                $font-size-base * .875 !default;
 $font-size-lg:                $font-size-base * 1.25 !default;
 
@@ -650,16 +657,18 @@ $font-weight-bolder:          bolder !default;
 
 $font-weight-base:            $font-weight-normal !default;
 
-$line-height-base:            1.5 !default;
+// uidaho tweak line-height 1.556
+$line-height-base:            1.556 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+// uidaho tweak sizes, manually set
+$h1-font-size:                3.75rem !default;
+$h2-font-size:                3rem !default;
+$h3-font-size:                2.5rem !default;
+$h4-font-size:                1.875rem !default;
+$h5-font-size:                1.5rem !default;
+$h6-font-size:                1.375rem !default;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -678,7 +687,8 @@ $headings-margin-bottom:      $spacer * .5 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
 $headings-font-weight:        900 !default;
-$headings-line-height:        1.2 !default;
+// uidaho tweak 
+$headings-line-height:        1.1 !default;
 $headings-color:              inherit !default;
 // scss-docs-end headings-variables
 
