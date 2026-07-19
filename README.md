@@ -1,5 +1,7 @@
 # bootstrap-sass-template
 
+> I don't think this new set up is better or outputs much different than the old version
+
 Basic Jekyll project template containing the full Bootstrap Sass source code and necessary Gemfile dependencies.
 This allows you to use Bootstrap's Sass variables to fully customize your build of Bootstrap, following the [Bootstrap source files](https://getbootstrap.com/docs/5.3/getting-started/download/#source-files) approach.
 
