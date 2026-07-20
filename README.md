@@ -1,7 +1,5 @@
 # bootstrap-sass-template
 
-> test new set up
-
 Customized version for U of I color theme.
 Customized bootstrap parts are marked with comment `uidaho custom`.
 
