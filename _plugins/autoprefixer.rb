@@ -24,11 +24,22 @@ AUTOPREFIXER_BROWSERS = [
 Jekyll::Hooks.register :site, :post_write do |site|
   Dir.glob(File.join(site.dest, "assets", "css", "**", "*.css")).each do |file|
     css = File.read(file)
-    prefixed = AutoprefixerRails.process(
+    map_file = "#{file}.map"
+    # If the Sass converter wrote a source map, pass it through Autoprefixer so
+    # the map stays accurate and the sourceMappingURL comment is preserved.
+    map_opts = if File.exist?(map_file)
+                 { prev: File.read(map_file), inline: false, annotation: File.basename(map_file) }
+               else
+                 false
+               end
+    result = AutoprefixerRails.process(
       css,
       overrideBrowserslist: AUTOPREFIXER_BROWSERS,
-      map: false
-    ).css
-    File.write(file, prefixed) unless prefixed == css
+      from: File.basename(file),
+      to: File.basename(file),
+      map: map_opts
+    )
+    File.write(file, result.css) unless result.css == css
+    File.write(map_file, result.map) if map_opts && result.map
   end
 end
