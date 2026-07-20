@@ -308,7 +308,7 @@ $palouse: #034441 !default;
 $leather: #AB4700 !default;
 $bark:  #552301 !default;
 $brand-black: #191919 !default;
-$brand-grey: #F2F2F2 !default;
+$brand-gray: #F2F2F2 !default;
 $brand-white: #ffffff !default;
 
 // uidaho primary = clearwater to handle focus states etc
@@ -344,6 +344,7 @@ $theme-colors: (
   "leather": $leather,
   "bark": $bark,
   "brand-black": $brand-black,
+  "brand-gray": $brand-gray,
   "brand-white": $brand-white
 ) !default;
 // scss-docs-end theme-colors-map
